@@ -1,0 +1,17 @@
+[package]
+name = "php-glfw"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+ext-php-rs = "*"
+
+[profile.release]
+strip = "debuginfo"
+
+[dependencies.glfw]
+version = "0.53.0"
+default-features = false
